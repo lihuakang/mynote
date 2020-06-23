@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dbcedd7d-9f09-400f-a692-47b1545cdeb8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/celue/Sorter.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1W63rI0vEJHkAJv8XAnSXl9kjMi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.dl.ll" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\untitled1\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Client">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dl.pattern.strategy2.Client" />
+      <module name="untitled1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dl.pattern.strategy2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dl.jianzhi.Day01" />
+      <module name="untitled1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dl.jianzhi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dl.jianzhi.Day02" />
+      <module name="untitled1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dl.jianzhi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MergeSortTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dl.paixu.MergeSortTest" />
+      <module name="untitled1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dl.paixu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dl.pattern.strategy.Test" />
+      <module name="untitled1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dl.pattern.strategy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.MergeSortTest" />
+      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.Day01" />
+      <item itemvalue="Application.Day02" />
+      <item itemvalue="Application.Client" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Client" />
+        <item itemvalue="Application.Day02" />
+        <item itemvalue="Application.Day01" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.MergeSortTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dbcedd7d-9f09-400f-a692-47b1545cdeb8" name="Default Changelist" comment="" />
+      <created>1578456413996</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578456413996</updated>
+      <workItem from="1578456416909" duration="6588000" />
+      <workItem from="1578553746023" duration="18474000" />
+      <workItem from="1578902163667" duration="2072000" />
+      <workItem from="1579080794917" duration="122000" />
+      <workItem from="1579173631919" duration="680000" />
+      <workItem from="1579224050461" duration="63000" />
+      <workItem from="1579404826521" duration="732000" />
+      <workItem from="1579597765284" duration="5446000" />
+      <workItem from="1580469512069" duration="34525000" />
+      <workItem from="1583850524623" duration="3155000" />
+      <workItem from="1583903108930" duration="2445000" />
+      <workItem from="1584253430454" duration="4552000" />
+      <workItem from="1584365776132" duration="4237000" />
+      <workItem from="1584444994372" duration="1415000" />
+      <workItem from="1584582076382" duration="11956000" />
+      <workItem from="1584676838255" duration="2539000" />
+      <workItem from="1585653593775" duration="5196000" />
+      <workItem from="1585738553670" duration="5598000" />
+      <workItem from="1585830503057" duration="7253000" />
+      <workItem from="1585887062203" duration="4819000" />
+      <workItem from="1585991530046" duration="4071000" />
+      <workItem from="1586069375033" duration="1330000" />
+      <workItem from="1586168556957" duration="5098000" />
+      <workItem from="1586227289308" duration="741000" />
+      <workItem from="1586329630370" duration="9954000" />
+      <workItem from="1586398626769" duration="625000" />
+      <workItem from="1586531179934" duration="618000" />
+      <workItem from="1586606071245" duration="1651000" />
+      <workItem from="1591887313766" duration="646000" />
+      <workItem from="1592143474804" duration="1412000" />
+      <workItem from="1592185581909" duration="5257000" />
+      <workItem from="1592228936193" duration="867000" />
+      <workItem from="1592269518995" duration="1217000" />
+      <workItem from="1592367069347" duration="1223000" />
+      <workItem from="1592530876614" duration="7759000" />
+      <workItem from="1592612401602" duration="14343000" />
+      <workItem from="1592706494801" duration="669000" />
+      <workItem from="1592750244589" duration="2322000" />
+      <workItem from="1592831809700" duration="5783000" />
+      <workItem from="1592879361139" duration="5739000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="659" y="198" key="#com.intellij.ide.util.MemberChooser" timestamp="1592893746309">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state x="659" y="198" key="#com.intellij.ide.util.MemberChooser/0.0.1707.1027/2560.0.1920.1040@0.0.1707.1027" timestamp="1592893746309" />
+    <state x="659" y="198" key="#com.intellij.ide.util.MemberChooser/0.0.1707.1027@0.0.1707.1027" timestamp="1592841910147" />
+    <state x="634" y="255" key="FileChooserDialogImpl" timestamp="1592841412101">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state x="634" y="255" key="FileChooserDialogImpl/0.0.1707.1027/2560.0.1920.1040@0.0.1707.1027" timestamp="1592367093063" />
+    <state x="634" y="255" key="FileChooserDialogImpl/0.0.1707.1027@0.0.1707.1027" timestamp="1592841412101" />
+    <state x="651" y="387" width="429" height="252" key="Github.ShareDialog" timestamp="1592841435453">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state x="651" y="387" width="429" height="252" key="Github.ShareDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1592841435453" />
+    <state x="613" y="217" key="Github.UntrackedFilesDialog" timestamp="1592841445007">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state x="613" y="217" key="Github.UntrackedFilesDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1592841445007" />
+    <state width="830" height="283" key="GridCell.Tab.0.bottom" timestamp="1592894216189">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state width="830" height="283" key="GridCell.Tab.0.bottom/0.0.1707.1027/2560.0.1920.1040@0.0.1707.1027" timestamp="1592894216189" />
+    <state width="830" height="283" key="GridCell.Tab.0.bottom/0.0.1707.1027@0.0.1707.1027" timestamp="1592842461554" />
+    <state width="830" height="283" key="GridCell.Tab.0.center" timestamp="1592894216189">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state width="830" height="283" key="GridCell.Tab.0.center/0.0.1707.1027/2560.0.1920.1040@0.0.1707.1027" timestamp="1592894216189" />
+    <state width="830" height="283" key="GridCell.Tab.0.center/0.0.1707.1027@0.0.1707.1027" timestamp="1592842461554" />
+    <state width="830" height="283" key="GridCell.Tab.0.left" timestamp="1592894216188">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state width="830" height="283" key="GridCell.Tab.0.left/0.0.1707.1027/2560.0.1920.1040@0.0.1707.1027" timestamp="1592894216188" />
+    <state width="830" height="283" key="GridCell.Tab.0.left/0.0.1707.1027@0.0.1707.1027" timestamp="1592842461554" />
+    <state width="830" height="283" key="GridCell.Tab.0.right" timestamp="1592894216189">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state width="830" height="283" key="GridCell.Tab.0.right/0.0.1707.1027/2560.0.1920.1040@0.0.1707.1027" timestamp="1592894216189" />
+    <state width="830" height="283" key="GridCell.Tab.0.right/0.0.1707.1027@0.0.1707.1027" timestamp="1592842461554" />
+    <state width="831" height="341" key="GridCell.Tab.1.bottom" timestamp="1592658607600">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state width="831" height="341" key="GridCell.Tab.1.bottom/0.0.1707.1027@0.0.1707.1027" timestamp="1592658607600" />
+    <state width="831" height="341" key="GridCell.Tab.1.center" timestamp="1592658607600">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state width="831" height="341" key="GridCell.Tab.1.center/0.0.1707.1027@0.0.1707.1027" timestamp="1592658607600" />
+    <state width="831" height="341" key="GridCell.Tab.1.left" timestamp="1592658607600">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state width="831" height="341" key="GridCell.Tab.1.left/0.0.1707.1027@0.0.1707.1027" timestamp="1592658607600" />
+    <state width="831" height="341" key="GridCell.Tab.1.right" timestamp="1592658607600">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state width="831" height="341" key="GridCell.Tab.1.right/0.0.1707.1027@0.0.1707.1027" timestamp="1592658607600" />
+    <state x="446" y="247" key="Vcs.Push.Dialog.v2" timestamp="1592895085427">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state x="446" y="247" key="Vcs.Push.Dialog.v2/0.0.1707.1027/2560.0.1920.1040@0.0.1707.1027" timestamp="1592895085427" />
+    <state x="538" y="338" key="com.intellij.ide.util.TipDialog" timestamp="1592367069713">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state x="538" y="338" key="com.intellij.ide.util.TipDialog/0.0.1707.1027/2560.0.1920.1040@0.0.1707.1027" timestamp="1592367069713" />
+    <state x="538" y="338" key="com.intellij.ide.util.TipDialog/0.0.1707.1027@0.0.1707.1027" timestamp="1592228937910" />
+    <state x="241" y="215" key="new project wizard" timestamp="1585751526997">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state x="241" y="215" key="new project wizard/0.0.1707.1027@0.0.1707.1027" timestamp="1585751526997" />
+    <state x="556" y="141" key="refactoring.ChangeSignatureDialog" timestamp="1592889342509">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state x="556" y="141" key="refactoring.ChangeSignatureDialog/0.0.1707.1027/2560.0.1920.1040@0.0.1707.1027" timestamp="1592889342509" />
+    <state x="510" y="238" key="run.anything.popup" timestamp="1592619084075">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state x="510" y="238" key="run.anything.popup/0.0.1707.1027@0.0.1707.1027" timestamp="1592619084075" />
+    <state x="516" y="222" width="672" height="678" key="search.everywhere.popup" timestamp="1592893894728">
+      <screen x="0" y="0" width="1707" height="1027" />
+    </state>
+    <state x="516" y="222" width="672" height="678" key="search.everywhere.popup/0.0.1707.1027/2560.0.1920.1040@0.0.1707.1027" timestamp="1592893894728" />
+    <state x="516" y="222" width="672" height="678" key="search.everywhere.popup/0.0.1707.1027@0.0.1707.1027" timestamp="1591890806617" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/untitled1$Demo.ic" NAME="Demo Coverage Results" MODIFIED="1578492099284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.dl.test.*</FILTER>
+    </SUITE>
+  </component>
+</project>
