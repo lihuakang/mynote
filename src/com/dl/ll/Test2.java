@@ -1,11 +1,16 @@
 package com.dl.ll;
 
-public class Test2 extends Test{
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test2{
 
     public static void main(String[] args) {
-
-        Test2 test2=new Test2();
-        test2.setName("ww");
-        System.out.println(test2.getName());
+        List<Integer>  list=new ArrayList();
+        list.add(5);
+        list.add(10);
+        for (int x:list){
+            System.out.println(x+",");
+        }
     }
 }
