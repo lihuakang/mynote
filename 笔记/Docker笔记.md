@@ -296,7 +296,180 @@ docker run --name 自定义容器名
 
 ### 容器互联
 
+容器互联是除了端口映射外另一种跟容器交互的方式。
+
 docker run -d -P --name web --link db:db training/webapp python app.py
 
 --link 参数格式 --link name:alias   其中name是要连接的容器，alias是这个连接的别名。
+
+ docker inspect 746eecf52617 查看容器信息
+
+## 高级网络配置
+
+docker启动的时候，会自动创建一个docekr0虚拟网桥，Docker	随机分配一个本地未占用的私有网段（在 RFC1918 中定义）中的一个地址给 	docker0	接
+口。比如典型的 	172.17.42.1	，掩码为 	255.255.0.0	。此后启动的容器内的网口也会自动分配一个同一网段（	172.17.0.0/16	）的地址  。
+
+
+
+当创建一个	Docker	容器的时候，同时会创建了一对 	veth	pair	接口（当数据包发送到一个接口时， 另外一个接口也可以收到相同的数据包）。 这对接口一端在容器内，即 	eth0	； 另一端在本地并被挂载到docker0	网桥，名称以 	veth	开头（例如 	vethAQI2QT	）。通过这种方式，主机可以跟容器通信，容器之间也可以相互通信。 Docker	就创建了在主机和所有容器之间一个虚拟共享网络。  
+
+![image-20200903165225439](img\docker1.png)
+
+### 快速配置
+
+下面是一个跟	Docker	网络相关的命令列表。
+其中有些命令选项只有在	Docker	服务启动的时候才能配置，而且不能马上生效。
+	-b	BRIDGE	or	--bridge=BRIDGE		--指定容器挂载的网桥
+	--bip=CIDR		--定制	docker0	的掩码
+	-H	SOCKET...	or	--host=SOCKET...		--Docker	服务端接收命令的通道
+	--icc=true|false		--是否支持容器之间进行通信
+	--ip-forward=true|false		--请看下文容器之间的通信
+	--iptables=true|false		--禁止	Docker	添加	iptables	规则
+	--mtu=BYTES		--容器网络中的	MTU
+下面2个命令选项既可以在启动服务时指定，也可以	Docker	容器启动（	docker	run	） 时候指定。在
+Docker	服务启动的时候指定则会成为默认值，后面执行 	docker	run	时可以覆盖设置的默认值。
+	--dns=IP_ADDRESS...		--使用指定的DNS服务器
+	--dns-search=DOMAIN...		--指定DNS搜索域
+最后这些选项只有在 	docker	run	执行时使用，因为它是针对容器的特性内容。
+	-h	HOSTNAME	or	--hostname=HOSTNAME		--配置容器主机名
+	--link=CONTAINER_NAME:ALIAS		--添加到另一个容器的连接
+	--net=bridge|none|container:NAME_or_ID|host		--配置容器的桥接模式
+	-p	SPEC	or	--publish=SPEC		--映射容器端口到宿主主机
+	-P	or	--publish-all=true|false		--映射容器所有端口到宿主主机  
+
+### 配置DNS
+
+Docker	没有为每个容器专门定制镜像，那么怎么自定义配置容器的主机名和	DNS	配置呢？ 秘诀就是它利用虚拟文件来挂载到来容器的	3	个相关配置文件。  
+
+### 容器访问控制
+
+主要通过linux系统自带的iptables防火墙来进行管理
+
+#### 容器访问外部网络
+
+容器想要访问外部网络，必须有本地系统的转发的支持。
+
+```
+sysctl net.ipv4.ip_forward
+如果为1则为开启，为0则未开启
+```
+
+```
+sysctl  -w  net.ipv4.ip_forward=1
+手动设置转发支持
+```
+
+在启动容器的时候，加上参数--ip-forward=true ,Docker就会自动指定系统的ip_forward参数为1
+
+### 容器之间访问
+
+容器之间访问需要两方面的支持，默认所有容器都会被挂载到docker0网桥上，
+
+本地防火墙是否允许访问，--iptables是否允许通过。
+
+
+
+启动docker容器时候，默认是可以相互访问的，可以使用参数--icc=false则不会访问。
+
+
+
+#### 访问指定端口
+
+-icc=false关闭之后，可以通过--link=container:alias选项来访问容器的开放端口。
+
+## 映射容器端口到宿主主机
+
+默认情况，容器可以主动访问到外部网络的连接，但是外部网络无法访问到容器。
+
+### 容器访问外部实现
+
+容器所有才外部的连接，都会被NAT变成本地的ip地址。
+
+### 外部访问容器的实现
+
+可以在docker run 的时候加参数-P 或者-p
+
+## 配置docker0网桥
+
+网桥可以使真机和虚拟机之间直接交换数据。
+
+可以在服务启动时配置参数，
+
+--bip=CIDR --IP地址加子网掩码格式
+
+--mtu=BYTES  --最大传输单位
+
+
+
+也可以通过配置文件修改。
+
+```
+sudo brctl show
+# 查看网桥信息
+```
+
+每次新建容器的时候，Docker都会从可用网段中选择一个空闲的ip地址给容器的eth0
+
+### 自定义网桥
+
+启动docker服务的时候，使用-b BRIDGE或者--bridge=BRIDGE 来指定使用的网桥。
+
+```
+停止服务，删除旧的网桥
+service docker stop
+ip link set dev docker0 down
+brctl delbr docker0
+```
+
+创建一个网桥bridge0
+
+```
+brctl addbr bridge0
+ip addr add 192.168.5.1/24 dev bridge0
+ip link set dev bridge0 up
+```
+
+ip addr show bridge0
+
+## Dockerfile
+
+指令：
+
+From<image>  必须是第一条指令，在一个dockerfile中创建多个镜像时可以使用多个from。
+
+MAINTAINER<name>  指定维护者信息
+
+RUN：在当前镜像上执行的指令，创建一层新的镜像。
+
+CMD：支持三种格式
+
+​	CMD["executable","param1","param2"]使用exec执行
+
+​	CMD command param1 param2 在/bin/bash中执行，提供给需要交互的应用
+
+​	CMD ["param1","param2"]提供给ENTRYPOINT的默认参数
+
+每个Dockerfile只能执行写一条CMD，如果有多条只会执行最后一条。
+
+EXPORT <port>  告诉容器暴露的端口号，也可以在容器启动的时候-P系统会自动分配一个端口号。
+
+ENV <key><value> 指定一个环境变量，后续提供给RUN使用
+
+ADD<src><dest>  该命令将src目录复制到容器的value目录。src可以是dockerfile的相对目录
+
+COPY<src><value>复制主机的src到容器的dest
+
+ENTRYPOINT ["executable","param1","param2"]  在容器启动后执行，不会被docker run提供的参数覆盖。dockerfile中只能执行一条ENTRYPOINT，多条指挥执行最后一条。
+
+VOLUME ["/data"]创建一个可以从本地主机或者其他容器挂载的挂载点，一般用来存放数据库。
+
+USER deamon 指定运行容器的用户后者UID
+
+WORKDIR  /path/to/workdir  为后续的RUN、CMD、ENTRYPOINT指定配置的工作目录。
+
+ONBUILD：配置当所创建的镜像作为其他新创建的镜像时所执行的命令。
+
+### 创建镜像
+
+docker build [选项] 路径
 
