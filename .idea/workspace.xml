@@ -2,9 +2,186 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbcedd7d-9f09-400f-a692-47b1545cdeb8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/cglib-2.1.95.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/arithmetic/InsertSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/arithmetic/SelectSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/arithmetic/Stats.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/datastructure/AVLTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/datastructure/AVLTreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/java8/DemoStream01.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/jianzhi/Day05$Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/jianzhi/Day05$TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/jianzhi/Day05.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/jianzhi/Day06$Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/jianzhi/Day06$TreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/jianzhi/Day06.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/jvmtest2/HeapOOM$OOMObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/jvmtest2/HeapOOM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/jvmtest2/JavaVMStackOOM$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/jvmtest2/JavaVMStackOOM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/jvmtest2/JavaVMStackSOF.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/leetcode/AddTwoNumbersTest$ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/leetcode/AddTwoNumbersTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/leetcode/LengthOfLongestSubstringTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/linked/Demo01$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/linked/Demo01.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/linked/Demo02$DoubleNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/linked/Demo02$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/linked/Demo02.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/ll/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/nio2/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/thread/InterruptiblyLock$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/thread/InterruptiblyLock$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/thread/SeafCache.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/zuochengyun/Demo05.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/zuochengyun/Demo06.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/zuochengyun/Demo07.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/zuochengyun/Demo08.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/zuochengyun/Demo09.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cglib-2.1.95.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/arithmetic/InsertSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/arithmetic/SelectSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/arithmetic/Stats.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/bio/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/bio/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/datastructure/AVLTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/datastructure/AVLTreeNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/datastructure/CircleArrayQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/datastructure/DoubleLinked.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/datastructure/Linked.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/datastructure/MyLinked.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/datastructure/QueueTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/datastructure/StackTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/datastructure/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/datastructure/TreeNodeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/datastructure/TwoWayLinkedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/gctest/GCBigObjAge.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/gctest/GcBigObj.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/gctest/GcNum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/gctest/MinorGc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/java8/DemoStream01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/jianzhi/Day01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/jianzhi/Day02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/jianzhi/Day03.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/jianzhi/Day04.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/jianzhi/Day05.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/jianzhi/Day06.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/jvmtest/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/jvmtest/Demo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/jvmtest/Demo1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/jvmtest/DemoStack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/jvmtest/DirectMemoryOOM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/jvmtest/HelloWorld.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/jvmtest/RuntimePool.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/jvmtest2/HeapOOM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/jvmtest2/JavaVMStackOOM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/jvmtest2/JavaVMStackSOF.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/lambda/TestLambda1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/lambda/TestLambda2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/lambda/TestMethod1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/leetcode/AddTwoNumbersTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/leetcode/FindMid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/leetcode/LengthOfLongestSubstringTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/leetcode/TwoSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/linked/Demo01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/linked/Demo02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/ll/A.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/ll/B.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/ll/MessageResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/ll/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/ll/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/ll/Test2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/ll/Test3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/nio/MyClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/nio/MyServer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/nio2/Server.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/paixu/CountSortTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/paixu/InsertSortTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/paixu/MergeSortTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/paixu/QuickSort2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/paixu/QuickSortTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/paixu/RadixSortTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/paixu/ShellSortTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/paixu/bubbleSortTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/paixu/xuanzeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/abstractFactory/AbstractFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/abstractFactory/AbstractFactoryPatternTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/abstractFactory/Blue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/abstractFactory/Circle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/abstractFactory/Color.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/abstractFactory/ColorFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/abstractFactory/FactoryProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/abstractFactory/Green.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/abstractFactory/Rectangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/abstractFactory/Red.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/abstractFactory/Shape.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/abstractFactory/ShapeFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/abstractFactory/Square.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/door/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/door/Facade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/door/ModuleA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/door/ModuleB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/door/ModuleC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/factory/Airplain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/factory/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/factory/Moveable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/factory/SimpleVehicleFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/singleton/Mgr01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/singleton/Mgr02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/singleton/Mgr03.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/singleton/Mgr04.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/strategy/CashbackStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/strategy/CouponStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/strategy/EmptyStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/strategy/GroupbuyStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/strategy/PromotionActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/strategy/PromotionStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/strategy/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/strategy2/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/strategy2/Context.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/strategy2/NoStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/strategy2/Strategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/strategy2/Vip0Strategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/strategy2/Vip1Strategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/pattern/strategy2/Vip2Strategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/stream/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/stream/TestStreamApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/stream/TestStreamApi2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/stream/TestStreamApi3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/suanfa/BubbleSelcct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/suanfa/Test1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/suanfa/Test2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/suanfa/Test3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/suanfa/Test4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/suanfa/Test5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/suanfa/Test6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/suanfa/Test7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/suanfa/Test8.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/suanfa/find/ErfenFind.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/suanfa/tree/Tree1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/suanfa/tree/Tree2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/thread/AtomicIntegerDemoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/thread/CyclicBarrierDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/thread/DaemonThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/thread/InterruptiblyLock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/thread/MyCallable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/thread/NewCachedThreadPoolTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/thread/NewFixedThreadPoolTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/thread/NewScheduledThreadPoolTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/thread/NewSingleThreadExecutorTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/thread/SeafCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/thread/joinTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/zuochengyun/Demo05.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/zuochengyun/Demo06.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/zuochengyun/Demo07.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/zuochengyun/Demo08.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dl/zuochengyun/Demo09.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/untitled1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/笔记/JVM虚拟机.md" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/JVM虚拟机.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,79 +189,50 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/dl/leetcode/LengthOfLongestSubstringTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dl/rabbitmq/RabbitProducer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/dl/leetcode/FindMid.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1274">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/dl/ll/A.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="144">
+              <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/dl/ll/Person.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dl/leetcode/TwoSum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+            <state relative-caret-position="442">
+              <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/dl/ll/Test3.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dl/rabbitmq/RabbitConsumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+            <state relative-caret-position="390">
+              <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/untitled1.iml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/leetcode/editor.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -105,10 +253,33 @@
         <option value="$PROJECT_DIR$/.idea/misc.xml" />
         <option value="$PROJECT_DIR$/src/com/dl/ll/Test3.java" />
         <option value="$PROJECT_DIR$/src/com/dl/ll/Person.java" />
+        <option value="$PROJECT_DIR$/src/com/dl/rabbitmq/RabbitProducer.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dl/rabbitmq/RabbitProducer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dl/rabbitmq/RabbitConsumer.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="E:/apache-maven-3.0.5-bin/apache-maven-3.0.5" />
+        <option name="userSettingsFile" value="E:\apache-maven-3.0.5-bin\apache-maven-3.0.5\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -122,6 +293,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -133,13 +305,42 @@
             <path>
               <item name="untitled1" type="b2602c69:ProjectViewProjectNode" />
               <item name="untitled1" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="untitled1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untitled1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="untitled1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untitled1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="untitled1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untitled1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="untitled1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="untitled1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dl" type="462c0819:PsiDirectoryNode" />
+              <item name="rabbitmq" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -151,6 +352,10 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -164,7 +369,33 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.RabbitConsumer">
+    <configuration name="RabbitConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dl.rabbitmq.RabbitConsumer" />
+      <module name="untitled1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dl.rabbitmq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RabbitProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.dl.rabbitmq.RabbitProducer" />
+      <module name="untitled1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dl.rabbitmq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.dl.ll.Test3" />
       <module name="untitled1" />
@@ -180,6 +411,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RabbitConsumer" />
+        <item itemvalue="Application.RabbitProducer" />
         <item itemvalue="Application.Test3" />
       </list>
     </recent_temporary>
@@ -195,17 +428,18 @@
       <option name="presentableId" value="Default" />
       <updated>1599443833593</updated>
       <workItem from="1599443927912" duration="612000" />
+      <workItem from="1599644078812" duration="1289000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3279000" />
+    <option name="totallyTimeSpent" value="4568000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31694403" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3214826" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -214,7 +448,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3295082" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295082" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -247,7 +481,7 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/dl/ll/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dl/ll/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
@@ -260,14 +494,7 @@
         <state relative-caret-position="-156" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dl/leetcode/TwoSum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dl/leetcode/AddTwoNumbersTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dl/leetcode/AddTwoNumbersTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="962">
           <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
@@ -278,28 +505,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dl/leetcode/LengthOfLongestSubstringTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dl/leetcode/LengthOfLongestSubstringTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
           <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dl/leetcode/FindMid.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dl/leetcode/FindMid.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1274">
           <caret line="49" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dl/ll/A.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dl/ll/A.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dl/ll/Test3.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dl/ll/Test3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
@@ -321,10 +548,44 @@
     <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dl/ll/Person.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dl/ll/Person.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
           <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dl/rabbitmq/RabbitConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dl/rabbitmq/RabbitProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dl/leetcode/TwoSum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
         </state>
       </provider>
     </entry>
