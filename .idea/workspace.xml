@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbcedd7d-9f09-400f-a692-47b1545cdeb8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled1/com/dl/leetcode/LengthOfLongestSubstringTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled1/com/dl/leetcode/LengthOfLongestSubstringTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/笔记/JVM虚拟机.md" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/JVM虚拟机.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
