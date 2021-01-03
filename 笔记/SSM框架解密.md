@@ -1,0 +1,19 @@
+# SSM框架解密
+
+## 深入刨析Spring
+
+### Spring上下文和容器
+
+（1）ApplicationContext 是整个容器的基本功能定义类，继承了 BeanFactory，这说明容器也是工厂的多态实现。其实它利用了代理的设计方法，内部持有一个 BeanFactory 实例，这个实例替它执行 BeanFactory 接口定义的功能，这种典型的代理模式应用也是非常巧妙的。
+
+（2）AbstractApplicationContext是整个容器的核心处理类，是真正的Spring容器的执行者，在内部使用了模板方法，实现了高复用、高扩展，实现了Spring的启动、停止、刷新、事件推送、BeanFactory方法的默认实现及虚拟机回调的注册等。在本书中讲解Spring容器的加载方式时，会以这个类作为主线来讲解。
+
+（3）GenericApplicationContext是Spring Context模块中最容易构建Spring环境的实体类，涵盖了Spring Context的核心功能，在不需要特殊定制的场景下可以实现开箱即用。如图2-1所示，AnnotationConfigApplicationContext完美利用了GenericApplicationContext的封装性和对外简便性，如果想扩展适合自己业务的轻量级 Spring 容器，使用GenericApplicationContext这个基类则会非常容易上手。AnnotationConfigApplicationContext的构造方法先传入一个class 数组，再创建一个可执行的上下文实例来构造一个可运行的Spring运行环境，使用起来非常简便。
+
+（4）AbstractRefreshableApplicationContext是XmlWebApplicationContext的核心父类，如果当前上下文持有BeanFactory，则关闭当前BeanFactory，然后为上下文生命周期的下一个阶段初始化一个新的BeanFactory，并且在创建新容器时仍然保持对其父容器的引用。
+
+（5）EmbeddedWebApplicationContext是在Spring Boot中新增的上下文实现类，是使用自嵌容器启动Web应用的核心上下文基类。
+
+#### BeanFactory
+
+BeanFactory接口是Bean容器设计中基本的职责定义接口，定义了按照名称、参数、类型等几个维度获取、判断Bean实例的职能。

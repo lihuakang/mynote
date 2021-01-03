@@ -35,4 +35,42 @@ public class Demo01 {
         }
         System.out.println();
     }
+
+    //尾部插入
+    public Node add(int value,Node head){
+        Node newNode=new Node(value);
+        if (head==null){
+            head=newNode;
+            return head;
+        }
+        Node last=head;
+        while (last.next!=null){
+            last=last.next;
+        }
+        last.next=newNode;
+        return head;
+    }
+
+    public Node removeLastKthNode(Node head,int lastKth){
+        if (head==null || lastKth<1){
+            return head;
+        }
+        Node cur=head;
+        while (cur!=null){
+            lastKth--;
+            cur=cur.next;
+        }
+        if (lastKth==0){
+            head=head.next;
+        }
+        if (lastKth<0){
+            cur=head;
+            while (++lastKth!=0){
+                cur=cur.next;
+            }
+            cur.next=cur.next.next;
+        }
+
+        return head;
+    }
 }

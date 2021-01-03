@@ -40,6 +40,9 @@ public class Demo02 {
         public int value;
         public DoubleNode last;
         public DoubleNode next;
+        public DoubleNode(int data){
+            this.value=data;
+        }
     }
     public DoubleNode removeLastKthNode(DoubleNode head,int lastKth){
         if (head==null|| lastKth<1){

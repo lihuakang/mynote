@@ -1,5 +1,7 @@
 package com.dl.datastructure;
 
+import java.util.Stack;
+
 public class StackTest {
     private Object[] data=null;
     private int maxsize=0;
@@ -52,5 +54,19 @@ public class StackTest {
         Object obj2=stackTest.pop();
         System.out.println(obj2);
 //        stackTest.pop();
+    }
+
+    public static void sortStackByStack(Stack<Integer> stack){
+        Stack<Integer> help=new Stack<Integer>();
+        while (!stack.isEmpty()){
+            int cur=stack.pop();
+            while (!help.isEmpty() && help.peek()<cur){
+                stack.push(help.pop());
+            }
+            help.push(cur);
+        }
+        while (!help.isEmpty()){
+            stack.push(help.pop());
+        }
     }
 }
