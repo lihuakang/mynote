@@ -177,3 +177,481 @@ List<Integer> integers = Arrays.asList(1, 1, 2, 4, 2, 4, 5);
         System.out.println(collect.toString());
 ```
 
+#### 映射
+
+##### 对流中每一个元素应用函数
+
+流支持map方法，它会接受一个函数作为参数。这个函数会被应用到每个元素上，并将其映射成一个新的元素（使用映射一词，是因为它和转换类似，但其中的细微差别在于它是“创建一个新版本”而不去“修改”）。  
+
+```
+List<String> dishNames=menu.stream()
+						.map(Dish::getName)
+						.collect(toList());
+```
+
+因为getName方法返回一个String，所以map方法输出的流的类型就是Stream<String>  
+
+```
+List<String> words = Arrays.asList("Java 8", "Lambdas", "In", "Action");
+        List<Integer> wordLengths = words.stream()
+                .map(String::length)
+                .collect(toList());
+        System.out.println(wordLengths);//打印每个元素的长度
+```
+
+##### 流的扁平化
+
+```
+List<String> words = Arrays.asList("Hello", "World");
+        List<String> wordArr = words.stream()
+                .map(word->word.split(""))
+                .flatMap(Arrays::stream)
+                .distinct()
+                .collect(toList());
+        System.out.println(wordArr);//打印每个元素的长度
+```
+
+flatmap方法让你把一个流中的每个值都换成另一个流，然后把所有的流连接起来成为一个流。  
+
+![image-20210105103458492](\img\java8-5.png)
+
+#### 查找和匹配
+
+Stream API通过allMatch、 anyMatch、 noneMatch、 findFirst和findAny方法提供了这样的工具。  
+
+##### 检查谓词是否至少匹配一个元素 
+
+anyMatch方法可以回答“流中是否有一个元素能匹配给定的谓词”。比如，你可以用它来看看菜单里面是否有素食可选择：
+
+anyMatch方法返回一个boolean，因此是一个终端操作。  
+
+```
+if(menu.stream().anyMatch(Dish::isVegetarian)){
+System.out.println("The menu is (somewhat) vegetarian friendly!!");
+}
+```
+
+anyMatch方法返回一个boolean，因此是一个终端操作。  
+
+##### 检查谓词是否匹配所有元素
+
+```
+boolean isHealthy = menu.stream()
+.allMatch(d -> d.getCalories() < 1000);
+```
+
+#####  noneMatch
+
+和allMatch相对的是noneMatch。它可以确保流中没有任何元素与给定的谓词匹配。  
+
+
+
+anyMatch、 allMatch和noneMatch这三个操作都用到了我们所谓的短路，这就是大家熟悉的Java中&&和||运算符短路在流中的版本。  
+
+#### 查找元素
+
+findAny方法将返回当前流中的任意元素。它可以与其他流操作结合使用  
+
+```
+ List<String> words = Arrays.asList("Hello", "World");
+        Optional<String> wordArr = words.stream()
+                .map(word->word.split(""))
+                .flatMap(Arrays::stream)
+                .distinct()
+                .findAny();
+        String s = wordArr.get();
+        System.out.println(wordArr);//打印容器类
+        System.out.println(s);//H
+```
+
+Optional简介
+Optional<T>类（ java.util.Optional）是一个容器类，代表一个值存在或不存在。在上面的代码中， findAny可能什么元素都没找到。 Java 8的库设计人员引入了Optional<T>，这样就不用返回众所周知容易出问题的null了。  
+
+Optional里面几种可以迫使你显式地检查值是否存在或处理值不存在的情形的方法也不错。
+ isPresent()将在Optional包含值的时候返回true, 否则返回false。
+ ifPresent(Consumer<T> block)会在值存在的时候执行给定的代码块。
+ T get()会在值存在时返回值，否则抛出一个NoSuchElement异常。
+ T orElse(T other)会在值存在时返回值，否则返回一个默认值。  
+
+```
+List<String> words = Arrays.asList("Hello", "World");
+        words.stream()
+                .map(word->word.split(""))
+                .flatMap(Arrays::stream)
+                .distinct()
+                .findAny()
+                .ifPresent(s-> System.out.println(s));//如果存在就执行下面代码
+```
+
+##### 查找第一个元素
+
+findFirst
+
+```
+ //找到平方能被3整除的第一个数
+        List<Integer> words=Arrays.asList(1,2,3,4,5,6,7,8);
+        words.stream()
+                .map(x->x*x)
+                .filter(x->x%3==0)
+                .findFirst()
+                .ifPresent(s-> System.out.println(s));//9
+```
+
+#### 归纳
+
+你见到过的终端操作都是返回一个boolean（ allMatch之类的）、 void（ forEach）或Optional对象（ findAny等）。你也见过了使用collect来将流中的所有元素组合成一个List  
+
+如何把一个流中的元素组合起来，使用reduce操作来表达更复杂的查询，比如“计算菜单中的总卡路里”或“菜单中卡路里最高的菜是哪一个”。
+
+此类查询需要将流中所有元素反复结合起来，得到一个值，比如一个Integer。这样的查询可以被归类为归约操作
+（将流归约成一个值）。用函数式编程语言的术语来说，这称为折叠（ fold），因为你可以将这个操
+作看成把一张长长的纸（你的流）反复折叠成一个小方块，而这就是折叠操作的结果。  
+
+##### 元素求和
+
+```
+//元素求和
+        List<Integer> words=Arrays.asList(1,2,3,4,5,6,7,8);
+        Integer reduce = words.stream()
+                .reduce(0, (a, b) -> a + b);
+               //0是初始值 后面lambda表达式
+        System.out.println(reduce);
+```
+
+![image-20210105110940163](D:\note\mynote\笔记\img\java8-6.png)
+
+无初始值  
+
+```
+//元素求和
+        List<Integer> words=Arrays.asList(1,2,3,4,5,6,7,8);
+        //返回值时Option
+        words.stream()
+                .reduce( (a, b) -> a + b).ifPresent(x-> System.out.println(x));
+```
+
+##### 最大值和最小值
+
+```
+//元素最大值
+        List<Integer> words=Arrays.asList(1,2,3,4,5,6,7,8);
+        //返回值时Option
+        Optional<Integer> reduce = words.stream()
+                .reduce(Integer::max);
+        reduce.ifPresent(x-> System.out.println(x));
+```
+
+![image-20210105111613646](D:\note\mynote\笔记\img\java8-7.png)
+
+#### 数值流
+
+```
+List<Integer> words=Arrays.asList(1,2,3,4,5,6,7,8);
+       
+        int reduce = words.stream()
+                .reduce(0, Integer::sum);
+//这里面暗含了Integer的拆箱
+```
+
+##### 原始类型流特化
+
+IntStream、 DoubleStream和LongStream，分别将流中的元素特化为int、 long和double，从而避免了暗含的装箱成本。  
+
+##### 映射到数值流
+
+mapToInt会将流转成一个IntStream
+
+```
+ List<Integer> words=Arrays.asList(1,2,3,4,5,6,7,8);
+        //返回值时Option
+        OptionalDouble average = words.stream()
+                .mapToInt(Integer::intValue)
+                .average();
+        average.ifPresent(a-> System.out.println(a));
+```
+
+##### 转换回对象流
+
+intStream.boxed()
+
+```
+List<Integer> words=Arrays.asList(1,2,3,4,5,6,7,8);
+        IntStream intStream = words.stream().mapToInt(Integer::intValue);
+        Stream<Integer> boxed = intStream.boxed();
+```
+
+##### 数值范围
+
+Java 8引入了两个可以用于IntStream和LongStream的静态方法，帮助生成这种范围：range和rangeClosed。这两个方法都是第一个参数接受起始值，第二个参数接受结束值。但range是不包含结束值的，而rangeClosed则包含结束值。  
+
+```
+ IntStream intStream1 = IntStream.range(1, 100);
+        int sum = intStream1.sum();
+        System.out.println(sum);
+```
+
+#### 构建流
+
+值序列、数组、文件来创建流，甚至由生成函数来创建无限流！  
+
+##### 1 通过Collection系列的集合创建流
+
+##### 2 通过Arrays的静态方法stream()
+
+##### 3 通过Stream类中的静态方法of()
+
+##### 4 创建无限流
+
+Stream.iterate和Stream.generate。  创建无限流，流是无界的，有limit截取。
+
+```
+Stream.iterate(0,n->n+2)
+                .limit(10)
+                .forEach(System.out::println);
+```
+
+```
+ Stream.generate(Math::random)
+                .limit(10)
+                .forEach(System.out::println);
+```
+
+#### 用流收集数据
+
+流支持两种类型的操作：中间操作（如filter或map）和终端操作（如count、 findFirst、 forEach和reduce）。中间操作可以链接起来，将一个流转换为另一个流。这些操作不会消耗流，其目的是建立一个流水线。与此相反，终端操作会消耗流，以产生一个最终结果 
+
+collect()终端操作
+
+##### 预定义收集器
+
+预定义收集器的功能，也就是那些可以从Collectors类提供的工厂方法（例如groupingBy）创建的收集器。它们主要提供了三大功能：
+ 将流元素归约和汇总为一个值
+ 元素分组
+ 元素分区  
+
+##### 汇总
+
+```
+List<Integer> words=Arrays.asList(1,2,3,4,5,6,7,8);
+        Long collect = words.stream().collect(Collectors.counting());
+        System.out.println(collect);//8
+  //等同于
+  long count = words.stream().count();
+```
+
+##### 取最大值最小值
+
+```
+Optional<Integer> collect1 = words.stream().collect(minBy((a, b) -> a.compareTo(b)));
+        collect1.ifPresent(x-> System.out.println(x));
+```
+
+```
+Optional<Integer> collect1 = words.stream().collect(maxBy((a, b) -> a.compareTo(b)));
+        collect1.ifPresent(x-> System.out.println(x));
+```
+
+求和
+
+```
+int collect2 = words.stream().collect(summingInt(Integer::intValue));
+        System.out.println(collect2);//36
+```
+
+求平均数
+
+```
+ Double collect2 = words.stream().collect(averagingInt(Integer::intValue));
+        System.out.println(collect2);
+```
+
+##### 连接字符串
+
+把所有元素都链接到一起
+
+```
+String collect3 = words.stream().map(a -> a.toString()).collect(joining());
+        System.out.println(collect3);//12345678
+```
+
+```
+ String collect3 = words.stream().map(a -> a.toString()).collect(joining(", "));
+        System.out.println(collect3);//1, 2, 3, 4, 5, 6, 7, 8
+```
+
+#### 分组
+
+一个常见的数据库操作是根据一个或多个属性对集合中的项目进行分组  
+
+通过苹果颜色进行分组
+
+```
+Map<String, List<Apple>> collect = list.stream().collect(groupingBy(Apple::getColor));
+        System.out.println(collect);
+```
+
+结果：
+
+```
+{red=[Apple{color='red', weight=11}, Apple{color='red', weight=2}], green=[Apple{color='green', weight=13}, Apple{color='green', weight=14}], black=[Apple{color='black', weight=22}]}
+```
+
+
+
+根据苹果重量分等级
+
+```
+Map<String, List<Apple>> collect1 = list.stream().collect(groupingBy((a) -> {
+            if (a.getWeight() > 20) {
+                return "a";
+            } else {
+                return "b";
+            }
+        }));
+        System.out.println(collect1);
+```
+
+结果：
+
+```
+{a=[Apple{color='black', weight=22}], b=[Apple{color='red', weight=11}, Apple{color='red', weight=2}, Apple{color='green', weight=13}, Apple{color='green', weight=14}]}
+```
+
+多级分组
+
+```
+Map<String, Map<String, List<Apple>>> collect2 = list.stream().collect(groupingBy(Apple::getColor, groupingBy((a) -> {
+            if (a.getWeight() > 20) {
+                return "a";
+            } else {
+                return "b";
+            }
+        })));
+        System.out.println(collect2);
+```
+
+##### 按子组收集数据
+
+```
+Map<String, Long> collect3 = list.stream().collect(groupingBy(Apple::getColor, counting()));
+        System.out.println(collect3);
+```
+
+结果：
+
+```
+{red=2, green=2, black=1}
+```
+
+求每组苹果中重量最大的
+
+```
+Map<String, Optional<Apple>> collect4 = list.stream().collect(groupingBy(Apple::getColor, maxBy(Comparator.comparingInt(Apple::getWeight))));
+        System.out.println(collect4);
+```
+
+结果
+
+```
+{red=Optional[Apple{color='red', weight=11}], green=Optional[Apple{color='green', weight=14}], black=Optional[Apple{color='black', weight=22}]}
+```
+
+
+
+把收集器结果转成另一种结果
+
+```
+Map<String, Apple> collect4 = list.stream().collect(groupingBy(Apple::getColor, collectingAndThen(maxBy(Comparator.comparingInt(Apple::getWeight)), Optional::get)));
+        System.out.println(collect4);
+```
+
+打印：
+
+```
+{red=Apple{color='red', weight=11}, green=Apple{color='green', weight=14}, black=Apple{color='black', weight=22}}
+```
+
+#### 分区
+
+分区是分组的特殊情况：由一个谓词（返回一个布尔值的函数）作为分类函数，它称分区函数。分区函数返回一个布尔值，这意味着得到的分组Map的键类型是Boolean，于是它最多可以分为两组——true是一组， false是一组  。
+
+```
+Map<Boolean, List<Apple>> collect = list.stream().collect(partitioningBy(x -> x.getWeight() > 10));
+        System.out.println(collect);
+```
+
+打印：
+
+```
+{false=[Apple{color='red', weight=2}], true=[Apple{color='red', weight=11}, Apple{color='green', weight=13}, Apple{color='green', weight=14}, Apple{color='black', weight=22}]}
+```
+
+获取谓词为true的分组
+
+```
+List<Apple> list1 = collect.get(true);
+```
+
+![image-20210105161236734](\img\java8-8.png)
+
+![image-20210105161330545](\img\java8-9.png)
+
+![image-20210105161357264](\img\java8-10.png)
+
+#### 收集器接口
+
+Collector接口  
+
+```
+public interface Collector<T, A, R> {
+Supplier<A> supplier();
+BiConsumer<A, T> accumulator();
+Function<A, R> finisher();
+BinaryOperator<A> combiner();
+Set<Characteristics> characteristics();
+}
+```
+
+toList工厂方法，它会把流中的所有元素收集成一个List。  
+
+##### 理解 Collector 接口声明的方法  
+
+建立新的结果容器： supplier方法  
+
+```
+public Supplier<List<T>> supplier() {
+return () -> new ArrayList<T>();
+}
+
+public Supplier<List<T>> supplier() {
+return ArrayList::new;
+}
+```
+
+将元素添加到结果容器： accumulator方法  
+
+```
+public BiConsumer<List<T>, T> accumulator() {
+return (list, item) -> list.add(item);
+}
+```
+
+```
+public BiConsumer<List<T>, T> accumulator() {
+return List::add;
+}
+```
+
+对结果容器应用最终转换： finisher方法  
+
+```
+public Function<List<T>, List<T>> finisher() {
+return Function.identity();
+}	
+```
+
+#### 并行数据处理与性能
+
+##### 并行流
+
+通过对收集源调用parallelStream方法来把集合转换为并行流。 并行流就是一个把内容分成多个数据 块，并用不同的线程分别处理每个数据块的流。  
