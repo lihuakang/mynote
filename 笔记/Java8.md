@@ -655,3 +655,139 @@ return Function.identity();
 ##### 并行流
 
 通过对收集源调用parallelStream方法来把集合转换为并行流。 并行流就是一个把内容分成多个数据 块，并用不同的线程分别处理每个数据块的流。  
+
+```
+Long reduce = Stream.iterate(0L, i -> i + 1) //创建无限流
+                .limit(100)
+                .parallel()//将流转换成并行流
+                .reduce(0L, Long::sum);
+        System.out.println(reduce);
+```
+
+##### 并行流转顺序流
+
+并行流调用sequential方法就可以转顺序流
+
+```
+stream.parallel()
+.filter(...)
+.sequential()
+.map(...)
+.parallel()
+.reduce();
+```
+
+##### 并行流用的线程池
+
+并行流内部默认使用了ForkJoinPool,默认处理线程数量就是处理器的数量。
+
+#### 分支/合并框架
+
+并行流基础框架就是jdk1.7的分支/合并 框架
+
+是executorService的一个实现类，把子任务分配给线程池ForkJoinPool中的工作线程。
+
+##### 使用RecursiveTask
+
+```
+public class ForkJoinSumCalculator extends RecursiveTask<Long> {
+    private final long[] numbers;
+    private final int start;
+    private final int end;
+    public static final long THRESHOLD=8;
+
+    public ForkJoinSumCalculator(long[] numbers) {
+        this(numbers,0,numbers.length);
+    }
+
+    public ForkJoinSumCalculator(long[] numbers, int start, int end) {
+        this.numbers = numbers;
+        this.start = start;
+        this.end = end;
+    }
+
+    @Override
+    protected Long compute() {
+        int length=end-start;
+        if (length<=THRESHOLD){
+            return computeSequentially(); //小于阈值顺序执行
+        }
+        ForkJoinSumCalculator leftTask=new ForkJoinSumCalculator(numbers,start,start+length/2);
+        leftTask.fork(); //利用另一个FoekJoinPool线程异步执行新创建的子任务
+        ForkJoinSumCalculator rightTask=new ForkJoinSumCalculator(numbers,start+length/2,end);
+        Long rightResult = rightTask.compute(); //同步执行，可能允许进一步递归
+        Long leftResult = leftTask.join();
+        return leftResult+rightResult;
+    }
+
+    private Long computeSequentially() {
+        long sum=0;
+        for (int i=start;i<end;i++){
+            sum+=numbers[i];
+        }
+        return sum;
+    }
+
+
+    public static void main(String[] args) {
+        long[] nums={1,2,3,4,5,6,7,8,9,10};
+        ForkJoinSumCalculator forkJoinSumCalculator=new ForkJoinSumCalculator(nums,0, nums.length);
+        Long compute = forkJoinSumCalculator.compute();
+        System.out.println(compute);
+    }
+}
+
+```
+
+### 默认方法
+
+Java 8引入了一个新功能，叫默认方法，通过默认方法你可以指定接口方法的默认实现。换句话说，接口能提供方法的具体实现。因此，实现接口的类如果不显式地提供该方法的具体实现，就会自动继承默认的实现。  
+
+方法上加default关键字
+
+冲突问题：
+
+接口是可以多实现的，但是java中时单继承，default方法自带实现类，在多实现的时候会产生冲突。
+
+三条规则：
+
+(1) 类中的方法优先级最高。类或父类中声明的方法的优先级高于任何声明为默认方法的优
+先级。
+(2) 如果无法依据第一条进行判断，那么子接口的优先级更高：函数签名相同时，优先选择
+拥有最具体实现的默认方法的接口，即如果B继承了A，那么B就比A更加具体。
+(3) 最后，如果还是无法判断，继承了多个接口的类必须通过显式覆盖和调用期望的方法，  显式地选择使用哪一个默认方法的实现  。
+
+如果平级无法选择，则编译异常、
+
+### Optional
+
+避免空指针。
+
+变量存在时， Optional类只是对类简单封装。变量不存在时，缺失的值会被建模成一个“空”的Optional对象，由方法Optional.empty()返回。 Optional.empty()方法是一个静态工厂方法，它返Optional类的特定单一实例  
+
+#### 声明一个空的Optional
+
+```
+Optional<Apple> optional=Optional.empty();
+```
+
+#### 依据一个非空值创建Optional
+
+```
+Apple apple=new Apple();
+Optional<Apple> optApple=Optional.of(apple);
+```
+
+#### 可接受null的Optional
+
+```
+Optional<Apple> apple1 = Optional.ofNullable(apple);
+```
+
+#### 使用 map 从 Optional 对象中提取和转换值  
+
+```
+Optional<Apple> apple1 = Optional.ofNullable(apple);
+        Optional<String> s = apple1.map(Apple::getColor);
+```
+

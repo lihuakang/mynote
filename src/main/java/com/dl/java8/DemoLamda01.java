@@ -222,4 +222,23 @@ public class DemoLamda01 {
         Object collect1 = supplier.get().stream().collect(toList());
         System.out.println(collect1);
     }
+    @Test
+    public void test18(){
+        Long reduce = Stream.iterate(0L, i -> i + 1)
+                .limit(100)
+                .parallel()
+                .reduce(0L, Long::sum);
+        System.out.println(reduce);
+    }
+    @Test
+    public void test19(){
+        //声明一个空的Optional
+        Optional<Apple> optional=Optional.empty();
+        //依据一个非空值创建Optional
+        Apple apple=new Apple();
+        Optional<Apple> optApple=Optional.of(apple);
+        //可接受null的Optional
+        Optional<Apple> apple1 = Optional.ofNullable(apple);
+        Optional<String> s = apple1.map(Apple::getColor);
+    }
 }
