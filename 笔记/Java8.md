@@ -791,3 +791,116 @@ Optional<Apple> apple1 = Optional.ofNullable(apple);
         Optional<String> s = apple1.map(Apple::getColor);
 ```
 
+#### 默认行为
+
+我们决定采用orElse方法读取这个变量的值，使用这种方式你还可以定义一个默认值，遭遇空的Optional变量时，默认值会作为该方法的调用返回值。 Optional类提供了多种方法读取Optional实例中的变量值  
+
+get() 如果变量存在，它直接返回封装的变量值，否则就抛出一个NoSuchElementException异常。  
+
+orElse() 允许你在Optional对象不包含值时提供一个默认值。  
+
+orElseGet(Supplier<? extends T> other)是orElse方法的延迟调用版，  
+
+orElseThrow(Supplier<? extends X> exceptionSupplier)和get方法非常类似，它们遭遇Optional对象为空时都会抛出一个异常，但是使用orElseThrow你可以定制希望抛出的异常类型.
+
+ifPresent(Consumer<? super T>)让你能在变量值存在时执行一个作为参数传入的方法，否则就不进行任何操作。    
+
+```
+public Optional<Insurance> nullsafeFindCheapestInsurance(Optional<Person> person,Optional<Car> car){
+        if (person.isPresent()&& car.isPresent()){
+            return Optional.of(findCheapestInsurance(person.get(),car.get()));
+        }else {
+            return Optional.empty();
+        }
+    }
+```
+
+#### filter过滤
+
+```
+Optional<Insurance> optInsurance = ...;
+optInsurance.filter(insurance ->
+"CambridgeInsurance".equals(insurance.getName()))
+.ifPresent(x -> System.out.println("ok"));
+```
+
+### 组合式异步编程CompletableFuture
+
+#### Future接口
+
+返回一个执行结果
+
+```
+ExecutorService executor = Executors.newCachedThreadPool();//创建线程池
+Future<Double> future = executor.submit(new Callable<Double>() {
+public Double call() {
+//异步执行
+return doSomeLongComputation();
+}});
+//异步操作同时做其他操作
+doSomethingElse();
+try {
+Double result = future.get(1, TimeUnit.SECONDS);
+} catch (ExecutionException ee) {
+// 计算抛出一个异常
+} catch (InterruptedException ie) {
+// 当前线程在等待过程中被中断
+} catch (TimeoutException te) {
+// 在Future对象完成之前超过已过期
+}
+```
+
+#### 使用 CompletableFuture 构建异步应用  
+
+```
+public Future<Double> getPriceAsync(String product) {
+CompletableFuture<Double> futurePrice = new CompletableFuture<>();
+new Thread( () -> {
+double price = calculatePrice(product);
+futurePrice.complete(price);
+}).start();
+return futurePrice;
+}
+```
+
+### 新的日期和时间API
+
+java.time包中提供了很多新的类可以帮你解决问题，它们是LocalDate、 LocalTime、 Instant、 Duration和Period。  
+
+#### LocalDate和LocalTime
+
+```
+ LocalDate date=LocalDate.of(2014,3,18);
+        int year=date.getYear(); //2014
+        Month month=date.getMonth(); //MARCH
+        int day = date.getDayOfMonth(); //18
+        DayOfWeek dow = date.getDayOfWeek(); //星期几
+        int len = date.lengthOfMonth();//31
+        boolean leapYear = date.isLeapYear();//是否是闰年
+
+        LocalDate today=LocalDate.now();
+
+        //一天中的时间
+        LocalTime time=LocalTime.of(12,35,12);
+        int hour = time.getHour();//12
+        int minute = time.getMinute();//35
+        int second = time.getSecond();//12
+
+        LocalDate localDate=LocalDate.parse("2019-02-15");
+        LocalTime localTime=LocalTime.parse("13:22:25");
+```
+
+#### 合并日期和时间
+
+```
+ LocalDate localDate=LocalDate.parse("2019-02-15");
+        LocalTime localTime=LocalTime.parse("13:22:25");
+        LocalDateTime dt1 = LocalDateTime.of(2014, Month.MARCH, 18, 13, 45, 20);
+        LocalDateTime dt2 = LocalDateTime.of(date, time);
+        LocalDateTime dt3 = date.atTime(13, 45, 20);
+        LocalDateTime dt4 = date.atTime(time);
+        LocalDateTime dt5 = time.atDate(date);
+        LocalDate date1 = dt1.toLocalDate();
+        LocalTime time1 = dt1.toLocalTime();
+```
+
