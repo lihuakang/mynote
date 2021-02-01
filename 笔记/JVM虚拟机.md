@@ -67,6 +67,40 @@ JavaInJava和Maxine一样， 它也是一个元循环虚拟机。
 的目标第一眼看起来的确很奇怪， 可能在某些特殊情况下， 在.NET上使用某些流行的Java库也许真的
 不算是伪需求？ IKVM.NET可以将Class文件编译成.NET Assembly， 在任意的CLI上运行。  
 
+## 编译过程
+
+Person.java -> 词法分析器 -> tokens流 -> 语法分析器 -> 语法树/抽象语法树 -> 语义分析器-> 注解抽象语法树 -> 字节码生成器 -> Person.class文件
+
+### 类文件 Class文件
+
+```
+cafe babe 0000 0034 0027 0a00 0600 1809 0019 001a 0800 1b0a 001c 001d 0700 1e07 001f 0100 046e 616d 6501 0012 4c6a 6176 612f 6c61 6e67 2f53 7472 696e 673b 0100 0361 6765 0100 0149 0100 0761 6464 7265
+```
+
+u1代表两个二进制位
+
+```
+ClassFile { 
+u4 magic;  魔术
+u2 minor_version; class版本
+u2 major_version; 
+u2 constant_pool_count;  常量池
+cp_info constant_pool[constant_pool_count-1]; 访问标识
+u2 access_flags;
+u2 this_class;  类索引
+u2 super_class;  父类索引
+u2 interfaces_count; 接口索引
+u2 interfaces[interfaces_count];
+u2 fields_count; 
+field_info fields[fields_count]; 
+u2 methods_count;
+method_info methods[methods_count]; 
+u2 attributes_count; attribute_info attributes[attributes_count]; 
+}
+```
+
+
+
 ## 自动内存管理
 
 ### 运行时数据区域
@@ -81,7 +115,7 @@ JavaInJava和Maxine一样， 它也是一个元循环虚拟机。
 
 生命周期与线程相同
 
-方法执行会创建**栈帧**，栈帧中存储局部变量表，操作数栈，动态连接，方法出口信息等。
+方法执行会创建**栈帧**，栈帧中存储**局部变量表**，操作数栈，**动态连接**，**方法出口**信息等。
 
 一个方法的调用和完成对应一个栈帧的入栈和出栈。
 
@@ -89,9 +123,17 @@ JavaInJava和Maxine一样， 它也是一个元循环虚拟机。
 
 这些数据类型在局部变量表中的存储空间以局部变量槽（Slot） 来表示， 其中64位长度的long和double类型的数据会占用两个变量槽， 其余的数据类型只占用一个。   
 
-
-
 HotSpot虚拟机的栈容量是不可以动态扩展的  
+
+**局部变量表**：方法中定义的局部变量以及方法的参数存放在这张表中 
+
+局部变量表中的变量不可直接使用，如需要使用的话，必须通过相关指令将其加载至操作数栈中作为操作数使用。
+
+**操作数栈**：以压栈和出栈方式存储操作数的。
+
+**动态链接**：每个栈帧都包含一个运行时常量池中该栈帧所属的方法的引用。持有这个引用是支持方法调用过程中的动态链接。
+
+**方法返回地址**:当一个方法开始执行后,只有两种方式可以退出，一种是遇到方法返回的字节码指令；一种是遇见异常，并且这个异常没有在方法体内得到处理。
 
 #### 本地方法栈
 
@@ -410,6 +452,14 @@ ZGC收集器是一款基于Region内存布局的， （暂时）不设分代的�
 
 ## 对象的内存分配
 
+堆内存分年轻代和老年代区域，比例1:2
+
+年轻代分为Eden区，Survivor from ,Survivor to 内存比例8:1:1
+
+同一个时间点上，S0和S1只能有一个区有数据，另外一个是空的。
+
+![image-20210127150934369](\img\jvm5-1.png)
+
 ### 对象优先在Eden区
 
 大多数情况下，对象在新生代的Eden区分配，当Eden区没有足够空间时，会触发一次Minor GC
@@ -443,7 +493,7 @@ jps查看进程以及进程的id
 
 jps -l能查看正在运行的进程
 
-![image-20200831145923427](C:\Users\Sinosoft\Desktop\笔记\jvm5.png)
+![image-20200831145923427](\img\jvm5.png)
 
 ### jstat: 虚拟机统计信息监控工具
 
@@ -587,7 +637,7 @@ java.lang.Object外， 所有Java类的父类索引都不为0。
 
 ### 准备
 
-为类定义变量，分配内存，设置类变量初始值，（不包含实例变量）
+为类定义变量（静态变量），分配内存，设置类变量初始值，（不包含实例变量）
 
 ### 解析
 

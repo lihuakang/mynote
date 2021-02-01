@@ -5,10 +5,7 @@ import java.util.Map;
 
 public class A {
     public static void main(String[] args) {
-        Map map=new HashMap();
-        map.put("tom",123.2);
-        map.put("tom",(Double)map.get("tom")+100);
-
-        System.out.println(map.get("tom"));
+        String a="12/11/2020";
+        System.out.println(a.replace("/","-"));
     }
 }
