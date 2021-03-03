@@ -200,3 +200,37 @@ ENV  JAVA_HOME /usr/local/openjdk8 设置环境常量
 
 RUN ${JAVA_HOME}/bin/java -jar test.jar 运行指令
 
+#### dockerfile执行命令
+
+**RUN**： 在build构建时执行命令。
+
+```
+RUN yum install -y vim  #shell命令
+RUN ["yum","install","-y","vim"] #Exec命令
+```
+
+shell执行时，当前shell是父进程，生成一个子进程，在子进程中执行shell脚本，执行完成退出子进程shell，回到当前shell。
+
+Exec方式，会用exec进行替换原来进程，保持pid不变。
+
+**ENTRYPOINT**:容器启动时执行命令。
+
+```
+ENTRYPOINT ["ps"]      
+在dockerfile中只有最后一条ENTRYPOINT指令会执行。
+```
+
+**CMD**：容器启动后执行默认的命令或参数。
+
+```
+CMD ["ps","-ef"] 
+CMD命令只有最后一条指令执行，如果容器启动时附加指令，则被CMD忽略、
+```
+
+![image-20210204150040177](\img\docker-4.png)
+
+```
+docker run lihuakang/run ls
+这个ls会取代CMD命令
+```
+
